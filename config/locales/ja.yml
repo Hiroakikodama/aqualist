@@ -1,0 +1,15 @@
+ja:
+  activerecord:
+    attributes:
+      aquarium:
+        name: 水族館名
+        introduction: 説明
+        address: 住所
+        official: 公式HPのURL
+  views:
+    pagination:
+      first: 最初
+      last: 最後
+      previous: 前
+      next: 次
+      truncate: ...

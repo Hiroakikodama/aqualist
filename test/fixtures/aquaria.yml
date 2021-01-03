@@ -1,0 +1,31 @@
+# == Schema Information
+#
+# Table name: aquaria
+#
+#  id           :integer          not null, primary key
+#  address      :text
+#  aquarium_img :string
+#  introduction :text
+#  name         :string
+#  official     :text
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#
+
+one:
+  name: MyString
+  introduction: MyText
+  address: MyText
+  official: MyText
+  event: MyString
+  starttime: 2021-01-02 08:43:03
+  endingtime: 2021-01-02 08:43:03
+
+two:
+  name: MyString
+  introduction: MyText
+  address: MyText
+  official: MyText
+  event: MyString
+  starttime: 2021-01-02 08:43:03
+  endingtime: 2021-01-02 08:43:03

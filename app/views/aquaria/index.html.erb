@@ -1,0 +1,35 @@
+<div class="d-flex align-items-center">
+  <h1>水族館一覧</h1>
+  <div class="ml-auto aquaria__linkBox">
+    <%= link_to '新規作成', new_aquarium_path, class: 'btn btn-outline-dark' %>
+  </div>
+</div>
+
+<% if flash[:notice] %>
+<div class="alert alert-danger"><%= flash[:notice] %></div>
+<% end %>
+
+<div class="row">
+  <% @aquaria.each do |aquarium| %>
+  <div class="col-3">
+    <div class="card" style="width: 15rem;">
+      <div class="card-header"></div>
+      <% if aquarium.aquarium_img? %>
+      <span class="bd-placeholder-img card-img-top">
+        <%= image_tag aquarium.aquarium_img.url, class: 'aquarium_img' %>
+      </span>
+      <% else%>
+      <span class="bd-placeholder-img card-img-top">
+        <%= image_tag "no-image.jpg", class: 'aquarium_img' %>
+      </span>
+      <% end %>
+      <div class="card-body text-center">
+        <%= link_to aquarium.name, aquarium, class: "card-title edit_link" %>
+      </div>
+      <%= link_to '削除', aquarium, class: 'btn btn-outline-danger', method: :delete %>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+<%= paginate @aquaria %>
