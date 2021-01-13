@@ -1,7 +1,6 @@
 <div class="d-flex align-items-center mt-4 mb-4">
   <div class="ml-auto aquaria__linkBox">
-    <%= link_to '水族館一覧', aquaria_path, class: "btn btn-outline-dark" %>
-    <%= link_to '編集', edit_aquarium_path(@aquarium), class: "btn btn-outline-dark" %>
+    <%= link_to '水族館一覧', aquaria_path, class: "btn btn-outline-light" %>
   </div>
 </div>
 
@@ -12,6 +11,9 @@
 <div class="card">
   <div class="card-header">
     <h4><%= @aquarium.name %></h4>
+    <% @aquarium.tags.each do |tag| %>
+    <span class="badge badge-primary"><%= tag.name %></span>
+    <% end %>
   </div>
   <div>
     <% if @aquarium.aquarium_img? %>

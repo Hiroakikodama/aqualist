@@ -1,0 +1,49 @@
+<div class="d-flex align-items-center">
+  <h1>水族館一覧</h1>
+  <div class="ml-auto aquaria__linkBox">
+    <%= form_with url: administrator_aquaria_path, method: :get, class: 'aquaria__searchForm' do %>
+    <%= select_tag :tag_id,
+                  options_from_collection_for_select(Tag.all, :id, :name, params[:tag_id]),
+                  {
+                    prompt: 'タグ検索',
+                    class: 'form-control aquaria__select',
+                    onchange: 'submit(this.form);'
+                  }
+    %>
+    <% end %>
+    <%= link_to '新規作成', new_administrator_aquarium_path, class: 'btn btn-outline-dark' %>
+  </div>
+</div>
+
+<% if flash[:notice] %>
+<div class="alert alert-danger"><%= flash[:notice] %></div>
+<% end %>
+
+<div class="row">
+  <% @aquaria.each do |aquarium| %>
+  <div class="col-3">
+    <div class="card bg-light mb-3" style="max-width: 18rem;">
+      <div class="card-header">
+        <% aquarium.tags.each do |tag| %>
+        <span class="badge badge-primary"><%= tag.name %></span>
+        <% end %>
+      </div>
+      <% if aquarium.aquarium_img? %>
+      <div class="bd-placeholder-img card-img-top">
+        <%= image_tag aquarium.aquarium_img.url, class: 'aquarium_img' %>
+      </div>
+      <% else%>
+      <span class="bd-placeholder-img card-img-top">
+        <%= image_tag "no-image.jpg", class: 'aquarium_img' %>
+      </span>
+      <% end %>
+      <div class="card-body text-center">
+        <%= link_to aquarium.name, administrator_aquarium_path(aquarium.id), class: "card-title edit_link" %>
+      </div>
+      <%= link_to '削除', [:administrator, aquarium], class: 'btn btn-outline-danger', method: :delete %>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+<%= paginate @aquaria %>

@@ -1,0 +1,33 @@
+<div class="d-flex align-items-center mt-4 mb-4">
+  <div class="ml-auto aquaria__linkBox">
+    <%= link_to '水族館一覧', administrator_aquaria_path, class: "btn btn-outline-dark" %>
+    <%= link_to '編集', edit_administrator_aquarium_path(@aquarium), class: "btn btn-outline-dark" %>
+  </div>
+</div>
+
+<% if flash[:notice] %>
+<div class="alert alert-primary"><%= flash[:notice] %></div>
+<% end %>
+
+<div class="card">
+  <div class="card-header">
+    <h4><%= @aquarium.name %></h4>
+    <% @aquarium.tags.each do |tag| %>
+    <span class="badge badge-primary"><%= tag.name %></span>
+    <% end %>
+  </div>
+  <div>
+    <% if @aquarium.aquarium_img? %>
+    <span class="bd-placeholder-img card-img-top">
+      <%= image_tag @aquarium.aquarium_img.url, class: 'aquarium_img' %>
+    </span>
+    <% end %>
+  </div>
+  <div class="card-body">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"><%= simple_format(@aquarium.introduction) %></li>
+      <li class="list-group-item"><%= @aquarium.address %></li>
+      <li class="list-group-item"><%= @aquarium.official %></li>
+    </ul>
+  </div>
+</div>

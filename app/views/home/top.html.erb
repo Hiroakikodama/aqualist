@@ -1,0 +1,11 @@
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <main role="main" class="inner cover">
+    <h1 class="cover-heading">AquaList'sへようこそ！</h1>
+    <p class="lead">全国の水族館を探すサイトへようこそ。管理人が行ったことのある水族館を載せていきます。</p>
+    <div class="top-items">
+      <%= link_to '水族館を見る', aquaria_path, class: 'edit_link top-item' %>
+      <%= link_to 'ユーザー登録する', new_user_path, class: 'edit_link top-item' %>
+      <%= link_to 'ログインする', homes_path, class: 'edit_link top-item' %>
+    </div>
+  </main>
+</div>

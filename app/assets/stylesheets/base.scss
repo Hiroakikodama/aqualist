@@ -1,8 +1,20 @@
 h1 {
   margin: 30px 0;
+  color: whitesmoke;
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+.title-logo {
+  font-family: "Nanum Gothic", sans-serif;
 }
 
 .edit_link {
   text-decoration: none;
   color: gray;
+}
+
+.main-area {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: rgb(26, 87, 128);
 }

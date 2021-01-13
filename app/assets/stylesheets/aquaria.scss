@@ -7,3 +7,18 @@
   height: 180px;
   object-fit: cover;
 }
+
+.aquaria__linkBox {
+  a {
+    margin: 0 8px;
+  }
+}
+
+.aquaria__searchForm {
+  display: inline-block;
+}
+
+.aquaria__select {
+  display: inline-block;
+  width: auto;
+}
