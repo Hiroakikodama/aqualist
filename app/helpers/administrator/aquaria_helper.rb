@@ -1,0 +1,2 @@
+module Administrator::AquariaHelper
+end

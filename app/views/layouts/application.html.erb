@@ -11,9 +11,11 @@
 </head>
 
 <body>
-  <div class="container">
+  <%= render 'header' %>
+  <div class="main-area container-fluid ">
     <%= yield %>
   </div>
+  <%= render 'footer' %>
 </body>
 
 </html>
