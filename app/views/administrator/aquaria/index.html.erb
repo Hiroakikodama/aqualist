@@ -11,7 +11,7 @@
                   }
     %>
     <% end %>
-    <%= link_to '新規作成', new_administrator_aquarium_path, class: 'btn btn-outline-dark' %>
+    <%= link_to '新規作成', new_administrator_aquarium_path, class: 'btn btn-outline-light' %>
   </div>
 </div>
 
@@ -40,7 +40,7 @@
       <div class="card-body text-center">
         <%= link_to aquarium.name, administrator_aquarium_path(aquarium.id), class: "card-title edit_link" %>
       </div>
-      <%= link_to '削除', [:administrator, aquarium], class: 'btn btn-outline-danger', method: :delete %>
+      <%= link_to '削除', [:administrator, aquarium], class: 'btn btn-outline-danger', method: :delete, date: { confirm: "【確認】削除してもよろしいですか？" } %>
     </div>
   </div>
   <% end %>

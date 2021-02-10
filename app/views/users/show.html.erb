@@ -1,12 +1,27 @@
-<% if @current_user.administrator? %>
-<div>
-  <h1>Users#show</h1>
-  <p><%= @current_user.name %></p>
-  <%= link_to '管理者サイド', administrator_aquaria_path, class: "btn btn-outline-dark" %>
-</div>
-<% else %>
-<div>
-  <h1>Users#show</h1>
-  <p><%= @current_user.name %></p>
-</div>
-<% end %>
+<h1>マイページ</h1>
+<p>ユーザー名：<%= @current_user.name %></p>
+
+<table class="table table-hover table-light table-responsive">
+  <thead>
+    <tr>
+      <th colspan="4">水族館名</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @aquaria.each do |aquarium| %>
+    <tr>
+      <td colspan="4"><%= aquarium.name %></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><%= link_to '詳細', aquarium, class: "btn btn-primary" %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @aquaria %>

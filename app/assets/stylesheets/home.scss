@@ -2,11 +2,43 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.top-item {
-  text-align: center;
-  margin-right: 10px;
-}
-
 .top-item:last-child {
   margin-right: 0;
+}
+
+.carousel-inner {
+  z-index: 2;
+}
+
+.top-image {
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
+}
+
+.top-backimage {
+  position: relative;
+  width: 100%;
+  height: 650px;
+
+  & a {
+    z-index: 4;
+  }
+}
+
+.top-over-letter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(181, 181, 181, 0.3);
+  z-index: 3;
+  text-align: center;
+  color: antiquewhite;
+}
+
+.top-item {
+  text-align: center;
+  margin-right: 15px;
 }

@@ -1,11 +1,40 @@
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-  <main role="main" class="inner cover">
-    <h1 class="cover-heading">AquaList'sへようこそ！</h1>
-    <p class="lead">全国の水族館を探すサイトへようこそ。管理人が行ったことのある水族館を載せていきます。</p>
-    <div class="top-items">
-      <%= link_to '水族館を見る', aquaria_path, class: 'edit_link top-item' %>
-      <%= link_to 'ユーザー登録する', new_user_path, class: 'edit_link top-item' %>
-      <%= link_to 'ログインする', homes_path, class: 'edit_link top-item' %>
+<div id="carouselExampleFade" class="carousel slide carousel-fade top-backimage" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <span><%= image_tag(asset_path('ocean1.jpg'), class:"top-image" ) %></span>
     </div>
-  </main>
+    <div class="carousel-item">
+      <span><%= image_tag(asset_path('ocean2.jpg'), class:"top-image" ) %></span>
+    </div>
+    <div class="carousel-item">
+      <span><%= image_tag(asset_path('ocean3.jpg'), class:"top-image" ) %></span>
+    </div>
+    <div class="carousel-item">
+      <span><%= image_tag(asset_path('ocean4.jpg'), class:"top-image" ) %></span>
+    </div>
+    <div class="carousel-item">
+      <span><%= image_tag(asset_path('ocean5.jpg'), class:"top-image" ) %></span>
+    </div>
+    <div class="carousel-item">
+      <span><%= image_tag(asset_path('ocean6.jpg'), class:"top-image" ) %></span>
+    </div>
+    <div class="carousel-item">
+      <span><%= image_tag(asset_path('ocean7.jpg'), class:"top-image" ) %></span>
+    </div>
+  </div>
+  <div class="top-over-letter">
+    <h1>AquaList'sへようこそ！</h1>
+    <p>全国の水族館を探すサイトへようこそ。管理人が行ったことのある水族館を載せていきます。まだ数は少ないのですが、いずれ全国全ての水族館を掲載します。</p>
+    <%= link_to '水族館を見る', aquaria_path, class: 'top-item btn btn-outline-light' %>
+    <%= link_to 'ユーザー登録する', new_user_path, class: 'top-item btn btn-outline-light' %>
+    <%= link_to 'ログインする', homes_path, class: 'top-item btn btn-outline-light' %>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
