@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: aquaria
+#
+#  id           :integer          not null, primary key
+#  address      :text
+#  aquarium_img :string
+#  introduction :text
+#  name         :string
+#  official     :text
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#
 require 'rails_helper'
 
 RSpec.describe 'Aquariumモデルのテスト', type: :model do

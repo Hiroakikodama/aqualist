@@ -15,10 +15,15 @@ class Aquarium < ApplicationRecord
   mount_uploader :aquarium_img, AquariumImgUploader
   has_many :aquarium_tag_relations, dependent: :delete_all
   has_many :tags, through: :aquarium_tag_relations
+  has_many :favorites, dependent: :destroy
 
 
   validates :name, presence: true
   validates :introduction, presence: true
   validates :address, presence: true
   validates :official, presence: true
+
+  def favorited_by?(user)
+    favorites.where(user_id: user.id).exists?
+  end
 end

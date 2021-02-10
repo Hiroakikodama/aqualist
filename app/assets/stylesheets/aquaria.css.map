@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAIA,AAAA,aAAa,CAAC;EACZ,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,KAAK;EACb,UAAU,EAAE,KAAK;CAClB;;AAED,AACE,iBADe,CACf,CAAC,CAAC;EACA,MAAM,EAAE,KAAK;CACd;;AAGH,AAAA,oBAAoB,CAAC;EACnB,OAAO,EAAE,YAAY;CACtB;;AAED,AAAA,gBAAgB,CAAC;EACf,OAAO,EAAE,YAAY;EACrB,KAAK,EAAE,IAAI;CACZ",
+    "sources": [
+        "aquaria.scss"
+    ],
+    "names": [],
+    "file": "aquaria.css"
+}

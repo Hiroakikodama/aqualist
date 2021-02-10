@@ -16,6 +16,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @aquaria = Aquarium.page(params[:page])
   end
 
   private

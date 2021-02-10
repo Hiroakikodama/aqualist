@@ -7,12 +7,13 @@
   <%= csp_meta_tag %>
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
 <body>
   <%= render 'header' %>
-  <div class="main-area container-fluid ">
+  <div class="main-area container-fluid">
     <%= yield %>
   </div>
   <%= render 'footer' %>
