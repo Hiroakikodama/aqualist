@@ -18,7 +18,7 @@
   <div>
     <% if @aquarium.aquarium_img? %>
     <span class="bd-placeholder-img card-img-top">
-      <%= image_tag @aquarium.aquarium_img.url, class: 'aquarium_img' %>
+      <%= attachment_image_tag @aquarium.aquarium_img.url, class: 'aquarium_img' %>
     </span>
     <% end %>
   </div>

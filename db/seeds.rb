@@ -8,7 +8,7 @@
 
 if Rails.env == 'production'
   Tag.create([
-    { name: '北海道' },
+  { name: '北海道' },
   { name: '青森県' },
   { name: '岩手県' },
   { name: '宮城県' },
