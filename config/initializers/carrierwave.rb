@@ -8,9 +8,15 @@ CarrierWave.configure do |config|
     config.fog_directory  = 'aqua-image' # 作成したバケット名を記述
     config.fog_credentials = {
       provider: 'AWS',
-      aws_access_key_id: ENV['DB_USERNAME'], # 環境変数
-      aws_secret_access_key: ENV['DB_PASSWORD'], # 環境変数
-      region: 'ap-northeast-1',   # アジアパシフィック(東京)を選択した場合
+      aws_access_key_id: ENV[''], # 環境変数
+      aws_secret_access_key: ENV[''], # 環境変数
+      region: 'AWS_REGION',
       path_style: true
     }
+  else
+    config.storage :file
+    config.enable_processing = false if Rails.env.test?
+  end
 end
+
+CarrierWave::SanitizedFile.sanitize_regexp = /[^[:word:]\.\-\+]/
